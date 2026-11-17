@@ -42,7 +42,7 @@ INSERT INTO packages (package) VALUES
 ('6dl üveg'),
 ('3dl palack');
 
-INSERT INTO drinks (drink, amount, price, type_id, package_id) VALUES
+INSERT INTO drinks (name, amount, price, type_id, package_id) VALUES
 ('Kávé', 200, 500, 1, 1),
  ('Tea', 300, 400, 2, 2),
  ('Sör', 500, 800, 3, 3),

@@ -6,7 +6,7 @@ use Illuminate\Http\JsonResponse;
 
 trait ResponseHandler {
     
-    public function sendResponse( Object $data, string $message = "", int $code = 200 ) {
+    public function sendResponse( mixed $data, string $message = "", int $code = 200 ) {
 
         $response = [
 
@@ -15,6 +15,6 @@ trait ResponseHandler {
             "message" => $message,
         ];
 
-        return response()->json([ $response, $code ]);
+        return response()->json( $response, $code );
     }
 }

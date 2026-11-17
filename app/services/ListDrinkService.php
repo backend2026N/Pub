@@ -15,4 +15,12 @@ class ListDrinkService {
 
         return DrinkResource::collection( $drinks );
     }
+
+    public function getDrink( Drink $drink ) {
+
+        $insDrink = $drink->load( "type", "package" );
+        $oneDrink = ( new DrinkResource( $insDrink ));
+
+        return $oneDrink; 
+    }
 }
